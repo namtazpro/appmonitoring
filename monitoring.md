@@ -1,5 +1,14 @@
 # Working with Azure Monitoring for your Application
 
+First to understand about Monitoring your App read these two articles that work together.
+- About Azure Logs
+- About Azure Metrics
+They are the central piece to the Monitoring on Azure when you look at this diagram
+
+Best practises for Monitoring and Diagnostics
+https://docs.microsoft.com/en-us/azure/architecture/best-practices/monitoring#analyzing-availability-data
+
+
 ## Default deployment
 Deploy a WebApp with default values.
 - WebApp
@@ -46,7 +55,7 @@ These will start getting populated (with a short delay) when the configuration i
 ![Workspace Log Analytics query](/images/workspaceloganalyticquery.png)
 
 - HTTP requests go to table AppServiceHTTPLogs
-- AllMetrics go to table AzureMetrics
+- AllMetrics go to table AzureMetrics. At this point, you are getting the Metrics already available (under Metrics in the Monitoring panel) into your log analytics workspace so that you can do more advanced queries (e.g. cross with other log data), custom reports and longer retention period. 
 
 ### Reference articles
 [Web application monitoring on Azure](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/app-monitoring)
